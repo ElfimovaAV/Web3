@@ -10,7 +10,9 @@
 
 Примечания: Пользователь всегда вводит корректное число.*/
 
-const celsius = prompt("Введите температуру в градусах Цельсия: ");
-const fahrenheit = Math.round((9 / 5 * celsius + 32) * 10 )/ 10;
-alert (`Цельсий: ${celsius}, Фаренгейт: ${fahrenheit}`);
+const celsius = Number.parseFloat(prompt("Введите температуру в градусах Цельсия: "));
+// const fahrenheit = Math.round((9 / 5 * celsius + 32) * 10 ) / 10;
+const fahrenheit = 9 / 5 * celsius + 32;
+const roundfahrenheit = fahrenheit.toFixed(2)
+alert(`Цельсий: ${celsius}, Фаренгейт: ${roundfahrenheit}`);
 
